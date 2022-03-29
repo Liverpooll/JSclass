@@ -79,7 +79,10 @@ $('form').on('submit', function(e){
         $('.black-bg').removeClass('show-modal')
       });
 
-  $('.navbar-toggler').on('click',
-   function() {
-   document.querySelectorAll('.list-group')[0].classList.toggle('show');
- })
+      $('.navbar-toggler').on('click',
+      function() { 
+        document.querySelectorAll('.list-group')[0].classList.toggle('show');
+      });
+      
+      
+

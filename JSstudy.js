@@ -135,5 +135,12 @@ $('.before').on('click', function(){
   });
 
 
-
+  $(window).on('scroll', function(){
+    if (window.scrollY > 100) {
+     $('.navbar-brand').css('font-size', '20px');
+   }
+    });
+//  window.addEventListener('scroll', function(){
+//   console.log( window.scrollY )
+// });
   

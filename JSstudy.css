@@ -1,4 +1,6 @@
-
+:root {
+  scroll-behavior: auto;
+}
  
 .list-group {
   display: none;
@@ -75,4 +77,5 @@
 
 .navbar-brand {
   font-size: 30px;
+  transition: all 1s;
 }
