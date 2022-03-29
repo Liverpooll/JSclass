@@ -1,3 +1,4 @@
+
 // menu-bar 없애기
 
 var counts = 5;
@@ -111,28 +112,28 @@ $('.slide-3').on('click', function(){
 
 
 
-var 지금사진 = 1;
+var currentShowing = 1;
 
 $('.next').on('click', function(){
-  if(지금사진 == 1) {
+  if(currentShowing == 1) {
     $('.slide-container').css('transform', 'translateX(-100vw)');
-  지금사진 += 1;}
-    else if (지금사진 == 2) {
+  currentShowing += 1;}
+    else if (currentShowing == 2) {
       $('.slide-container').css('transform', 'translateX(-200vw)');
-      지금사진 += 1;}
+      currentShowing += 1;}
   });
 
- 지금사진 = 3;
+ currentShowing = 3;
 
 $('.before').on('click', function(){
-  if(지금사진 == 3) {
+  if(currentShowing == 3) {
     $('.slide-container').css('transform', 'translateX(-100vw)')
-  지금사진 -= 1;}
-    else if (지금사진 == 2) {
+  currentShowing -= 1;}
+    else if (currentShowing == 2) {
       $('.slide-container').css('transform', 'translateX(0vw)')
-      지금사진 -= 1;}
+      currentShowing -= 1;}
   });
 
-  window.addEventListener('scroll', function(){
-    
-  })
+
+
+  
