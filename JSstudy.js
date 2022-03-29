@@ -110,7 +110,9 @@ $('.slide-3').on('click', function(){
   $('.slide-container').css('transform', 'translateX(-200vw)');
 })
 
+// 슬라이드 버튼
 
+// 캐러셀
 
 var currentShowing = 1;
 
@@ -134,13 +136,47 @@ $('.before').on('click', function(){
       currentShowing -= 1;}
   });
 
+  // 캐러셀
+  // 헤더 사이즈 변경
 
   $(window).on('scroll', function(){
     if (window.scrollY > 100) {
      $('.navbar-brand').css('font-size', '20px');
    }
     });
+
+    $(window).on('scroll', function(){
+      if (window.scrollY < 100) {
+       $('.navbar-brand').css('font-size', '30px');
+     }
+      });
+
 //  window.addEventListener('scroll', function(){
 //   console.log( window.scrollY )
 // });
-  
+
+  // 헤더 사이즈 변경
+  // Lorem 스크롤이벤트
+$('.Lorem').on('scroll', function(){
+  var 스크롤양 = document.querySelector('.Lorem').scrollTop;
+  var 실제높이 = document.querySelector('.Lorem').scrollHeight;
+  var 현재높이 = document.querySelector('.Lorem').clientHeight;
+  if (스크롤양 + 현재높이 > 실제높이 - 1) {
+    alert('다 읽음');
+  }
+});
+  // Lorem 스크롤이벤트
+  // window 스크롤이벤트
+
+
+  $(window).on('scroll', function(){
+  var 바디양 = document.querySelector('html').scrollTop;  
+  var 바디실높이 = document.querySelector('html').scrollHeight;
+  var 바디현재높이 = document.querySelector('html').clientHeight; 
+  if (바디양 + 바디현재높이 > 바디실높이 - 1) {
+    alert('바디 다읽음');
+  }
+});
+
+
+  // window 스크롤이벤트
