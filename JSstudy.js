@@ -92,10 +92,7 @@ setInterval(function(){
 
 //로그인 
 
- // 슬라이드 버튼
-
-
- 
+ // 슬라이드 버튼 
  $('.slide-1').on('click', function(){
   $('.slide-container').css('transform', 'translateX(0vw)');
 })
@@ -180,3 +177,12 @@ $('.Lorem').on('scroll', function(){
 
 
   // window 스크롤이벤트
+
+  //배경누르면 모달 닫기
+
+  
+  $('.black-bg').on('click', function(e){
+    if ($(e.target).is($('.black-bg'))){
+      $('.black-bg').removeClass('show-modal');
+    }
+  });
