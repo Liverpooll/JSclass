@@ -8,3 +8,9 @@ for (let i = 0; i < 3; i++) {
   document.querySelectorAll('.card-body h5')[i].innerHTML = products[i]['title']
   document.querySelectorAll('.card-body p')[i].innerHTML = products[i].price
 }
+
+$.get('https://codingapple1.github.io/price.json').done(function(data){
+  console.log(data.price)
+}).fail(function(){
+  console.log('실패함')
+})
