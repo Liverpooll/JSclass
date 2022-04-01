@@ -28,8 +28,8 @@ a[0].addEventListener('input', function() {
   } else if (a[0].value == '바지') {
     a[1].classList.remove('form-hide');
     a[1].innerHTML = '';
-    for (let i = 0; i < pants.length; i++) {
-      
-    } 
-  } 
+    pants.forEach(function(b){
+     $('.form-select').eq(1).append(`<option>${b}</option>`)
+  })
+} 
 });
