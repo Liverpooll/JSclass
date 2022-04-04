@@ -1,16 +1,20 @@
 var products = [
-  { id : 0, price : '가격 : 70000', title : 'Blossom Dress' },
+  { id : 0, price : 70000, title : 'Blossom Dress' },
   { id : 1, price : 50000, title : 'Springfield Shirt' },
   { id : 2, price : 60000, title : 'Black Monastery' }
 ];
 
-for (let i = 0; i < 3; i++) {
-  document.querySelectorAll('.card-body h5')[i].innerHTML = products[i]['title']
-  document.querySelectorAll('.card-body p')[i].innerHTML = products[i].price
-}
-
-$.get('https://codingapple1.github.io/price.json').done(function(data){
-  console.log(data.price)
-}).fail(function(){
-  console.log('실패함')
+products.forEach((a, i)=>{
+  let inner = document.querySelector('.row').innerHTML
+  let 탬플릿 = 
+  `<div class="col-sm-4">
+  <img style="width : 200px;" src="https://via.placeholder.com/600" class="w-100">
+  <h5>${products[i].title}</h5>
+  <p>${products[i].price}</p>
+  </div>`;
+  document.querySelector('.row').innerHTML = inner + 탬플릿;
 })
+
+
+
+
