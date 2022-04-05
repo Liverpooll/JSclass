@@ -23,38 +23,46 @@ let shirts = [95, 100];
 let a = document.querySelectorAll('.form-select');
 
 
-// a[0].addEventListener('input', function() {
-//   if (a[0].value == '셔츠') {
-//     a[1].classList.remove('form-hide')
-//   } else if (a[0].value == '바지') {
-//     a[1].classList.remove('form-hide');
-//     pants.forEach(function(b, i){
-//      a[1].innerHTML = "<option>" + b + "</option>"
-//      a[1].innerHTML = "<option>" + b + "</option>"
-//      a[1].innerHTML = "<option>" + b + "</option>"
-//   })
-//   }
-// });
 
 
 a[0].addEventListener('input', function() {
-   if (a[0].value == '바지') {
+  if (a[0].value == '셔츠') {
+    a[1].classList.remove('form-hide')
+    a[1].innerHTML = '';
+    shirts.forEach(function (c){
+      a[1].insertAdjacentHTML('beforeend', '<option>' + c + '</option>');
+    })
+  } else if (a[0].value == '바지') {
     a[1].classList.remove('form-hide');
-    let str = '';
-    for (let i = 0; i < pants.length; i++) {
-      str = str + "<option>" + pants[i] + "</option>"}
-      a[1].classList.remove('form-hide');}
-    else if (a[0].value == '셔츠') {
-     a[1].innerHTML = str;
-    str = '';
-    for (let i = 0; i < shirts.length; i++) {
-      str = str + "<option>" + shirts[i] + "</option>"
-    } a[1].innerHTML = str;}
-    else if (a[0].value == '모자') {
-      a[1].classList.add('form-hide');
-    }
+    a[1].innerHTML = '';
+    pants.forEach(function(b, i){
+     a[1].insertAdjacentHTML('beforeend', '<option>' + b + '</option>');
+    })
+  } else if (a[0].value == '모자') {
+    a[1].classList.add('form-hide');
   }
+});
 
-);
+
+// a[0].addEventListener('input', function() {
+//    if (a[0].value == '바지') {
+//     a[1].classList.remove('form-hide');
+//     let str = '';
+//     for (let i = 0; i < pants.length; i++) {
+//       str = str + "<option>" + pants[i] + "</option>"}
+//       a[1].classList.remove('form-hide');}
+//     else if (a[0].value == '셔츠') {
+//      a[1].innerHTML = str;
+//     str = '';
+//     for (let i = 0; i < shirts.length; i++) {
+//       str = str + "<option>" + shirts[i] + "</option>"
+//     } a[1].innerHTML = str;}
+//     else if (a[0].value == '모자') {
+//       a[1].classList.add('form-hide');
+//     }
+//   }
+
+// );
+
 
 
