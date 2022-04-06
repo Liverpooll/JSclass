@@ -27,6 +27,23 @@
   visibility: visible;
 }
 
+.img-ground {
+  height: 2000px;
+}
+
+.img-ground img {
+  width: 600px;
+  height: 400px;
+  margin-top: 70px;
+}
+
+.winner {
+  position: sticky;
+  top: 50px;
+}
+
+
+
 .white-bg {
   background: white;
   border-radius: 5px;

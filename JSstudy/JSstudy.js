@@ -158,7 +158,7 @@ $('.Lorem').on('scroll', function(){
   var 스크롤양 = document.querySelector('.Lorem').scrollTop;
   var 실제높이 = document.querySelector('.Lorem').scrollHeight;
   var 현재높이 = document.querySelector('.Lorem').clientHeight;
-  if (스크롤양 + 현재높이 > 실제높이 - 1) {
+  if (스크롤양 + 현재높이 > 실제높이 - 0.1) {
     alert('다 읽음');
   }
 });
@@ -170,7 +170,7 @@ $('.Lorem').on('scroll', function(){
   var 바디양 = document.querySelector('html').scrollTop;  
   var 바디실높이 = document.querySelector('html').scrollHeight;
   var 바디현재높이 = document.querySelector('html').clientHeight; 
-  if (바디양 + 바디현재높이 > 바디실높이 - 1) {
+  if (바디양 + 바디현재높이 > 바디실높이 - 0.1) {
     alert('바디 다읽음');
   }
 });
@@ -186,3 +186,18 @@ $('.Lorem').on('scroll', function(){
       $('.black-bg').removeClass('show-modal');
     }
   });
+
+
+  $(window).scroll(function(){
+    let 높이 = $(window).scrollTop();
+    console.log(높이);
+
+    let y = -1/500 * 높이 + 1680/500
+    $('.winner').eq(0).css('opacity', y);
+
+    let z = -1/500 * 높이 + 2180/500
+    $('.winner').eq(1).css('opacity', z);
+});
+
+//1025-1525
+//1525-2025
