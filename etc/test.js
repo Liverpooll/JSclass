@@ -37,3 +37,14 @@
 // }
 
 // 평균판별기([20,20,20], 50);
+
+
+
+function solution(arr){  
+  let answer;
+  answer = arr.filter(function(v, i) {
+    return arr.indexOf(v)===i;
+  });
+  return answer;
+}
+
